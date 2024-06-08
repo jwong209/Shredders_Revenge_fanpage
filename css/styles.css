@@ -1,0 +1,462 @@
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: Rubik, Helvetica, sans-serif;
+    /* background-image: url(https://www.shredders-revenge.com/wp-content/uploads/2021/02/BG.jpg); */
+    background-image: url('../img/BG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #1b1625;
+    color: white;
+    line-height: 1.8rem;
+    margin: 0;
+    font-size: 1.25em;
+    min-width: 600px;
+}
+
+.glow {
+    /* font-size: 80px; */
+    color: #fff;
+    /* text-align: center; */
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2ccd71, 0 0 40px #2ccd71, 0 0 50px #2ccd71, 0 0 60px #2ccd71, 0 0 70px #2ccd71;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #35f5bb, 0 0 40px #35f5bb, 0 0 50px #35f5bb, 0 0 60px #35f5bb, 0 0 70px #35f5bb, 0 0 80px #35f5bb;
+    }
+  }
+
+/* ----------Header---------- */
+header {
+    position: fixed;
+    top: 0;
+    background-color: #06030e;
+    color: white;
+    width: 100vw;
+    z-index: 1000; /* keeps gallery from overlapping, header on top always */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+header > nav li {
+    color: white;
+    margin: 0 10px;    
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#header-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+    font-size: 1.125rem;
+}
+
+#header-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+#header-links a:hover {
+    color: greenyellow;
+}
+
+#turtle-logo {
+    object-fit: cover;
+    max-width: 150px;
+}
+
+/* ----------Main---------- */
+main {
+    min-height: 100vh;
+    min-width: 600px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-family: "Bangers";
+    text-align: center;
+    color: rgb(124, 238, 124);
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.green-text {
+    color: rgb(3, 174, 3);
+}
+
+#top-head {
+    background: none;
+}
+
+section {
+    margin: 80px auto;
+    padding: 30px 50px;
+    padding-bottom: 50px;
+    /* border: 1px solid red; */
+    background: rgba(8, 8, 41, 0.9);
+}
+
+/* ----------Hero Section---------- */
+#hero-section {
+    background: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px red dotted; */
+
+}
+
+#top-logo {
+    max-width: 800px;
+    /* border: 1px yellow solid; */
+    margin: 80px;
+}
+
+
+/* ----------Intro Section---------- */
+#opening {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 100vw;
+    padding: 80px;
+}
+
+.about-div {
+    width: 30%;
+    /* border: 1px dotted yellow; */
+}
+
+#keyart {
+    width: 100%;
+}
+
+#top-head {
+    text-align: center;
+    
+}
+
+/* ----------Features Section---------- */
+#features-section {
+    background: none;
+    width: 100%;
+}
+
+.features-flex {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.card {
+    width: 25%;
+    /* border: 1px yellow solid; */
+    background: rgba(8, 8, 41, 0.9);
+    text-align: center;
+}
+
+.card p {
+    padding: 0 25px;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* ----------Roster---------- */
+#roster-section {
+    /* border: 1px solid red; */
+    width: 100vw;
+}
+
+.roster-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 60%;
+    margin: 0 auto;
+    /* border: 1px dotted lime; */
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+
+.flip-card-front img {
+    object-fit: contain;
+    padding: 20px;
+}
+  
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.6s;
+transform-style: preserve-3d;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+border-radius: 15px;
+
+}
+
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+.flip-card-front {
+background-color: #bbb;
+color: black;
+border-radius: 15px;
+background-color: #18194f;
+}
+
+.flip-card-back {
+background-color: #191451;
+color: white;
+transform: rotateY(180deg);
+border-radius: 15px;
+}
+
+.flip-card-back i {
+    color: yellow;
+}
+
+/* ----------Product Info Section---------- */
+.first-column {
+    width: 150px;
+}
+
+#facts-section {
+    background: none;
+    width: 100%;
+}
+
+#facts-section img {
+    width: 500px;
+}
+
+#products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#facts-section table {
+    background: rgba(8, 8, 41, 0.9);
+    padding: 40px;
+    max-height: 500px;
+    width: 650px;
+    border-radius: 20px;
+}
+
+
+/* ----------Quote Section---------- */
+
+#quotes-section {
+    width: 100vw;
+}
+
+#quotes {
+    display: flex;
+    justify-content: center;
+}
+
+.quote-container {
+    width: 22%;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+
+#links-section {
+    width: 100%;
+    /* border: 1px solid yellow; */
+}
+
+#links-section ul {
+    /* border: 1px yellow dotted; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#gallery-section {
+    background: none;
+}
+
+/* ----------Footer---------- */
+footer{
+    width: 100vw;
+    padding: 20px;
+    padding-bottom: 60px;
+    background-color: #06030e;
+    color: white;
+    font-size: 0.75em;
+    margin-top: 80px;
+}
+
+#footerlinks {
+    display: flex;
+    justify-content: center;
+}
+
+#footerlinks li {
+    transition: transform .2s;
+}
+
+#footerlinks li:hover {
+    transform: scale(1.1);
+}
+
+.copyright {
+    text-align: center;
+}
+
+/* ----------Form---------- */
+form {
+    background: rgba(13,13,64,.9);
+    border-radius: 5px;
+    width: 500px;
+}
+
+/* ----------Gallery---------- */
+#gallery-section {
+    width: 900px;
+}
+
+img {
+    vertical-align: middle;
+  }
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
