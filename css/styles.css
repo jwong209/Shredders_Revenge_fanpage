@@ -2,9 +2,9 @@
     box-sizing: border-box;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+scroll-behavior: smooth;
+}
 
 body {
     font-family: Rubik, Helvetica, sans-serif;
@@ -19,26 +19,23 @@ body {
     line-height: 1.8rem;
     margin: 0;
     font-size: 1.25em;
-    min-width: 600px;
 }
 
 .glow {
-    /* font-size: 80px; */
     color: #fff;
-    /* text-align: center; */
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
-  }
+}
   
-  @-webkit-keyframes glow {
+@-webkit-keyframes glow {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2ccd71, 0 0 40px #2ccd71, 0 0 50px #2ccd71, 0 0 60px #2ccd71, 0 0 70px #2ccd71;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2ccd71, 0 0 40px #2ccd71, 0 0 50px #2ccd71, 0 0 60px #2ccd71, 0 0 70px #2ccd71;
     }
     to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #35f5bb, 0 0 40px #35f5bb, 0 0 50px #35f5bb, 0 0 60px #35f5bb, 0 0 70px #35f5bb, 0 0 80px #35f5bb;
+        text-shadow: 0 0 20px #fff, 0 0 30px #35f5bb, 0 0 40px #35f5bb, 0 0 50px #35f5bb, 0 0 60px #35f5bb, 0 0 70px #35f5bb, 0 0 80px #35f5bb;
     }
-  }
+}
 
 /* ----------Header---------- */
 header {
@@ -47,7 +44,7 @@ header {
     background-color: #06030e;
     color: white;
     width: 100vw;
-    z-index: 1000; /* keeps gallery from overlapping, header on top always */
+    z-index: 1000; 
 }
 
 nav {
@@ -59,7 +56,7 @@ nav {
 
 header > nav li {
     color: white;
-    margin: 0 10px;    
+    margin: 0 10px;  
 }
 
 ul {
@@ -88,15 +85,10 @@ li {
 
 #turtle-logo {
     object-fit: cover;
-    max-width: 150px;
+    max-width: 120px;
 }
 
 /* ----------Main---------- */
-main {
-    min-height: 100vh;
-    min-width: 600px;
-}
-
 h1 {
     text-align: center;
 }
@@ -123,27 +115,27 @@ h3 {
 }
 
 section {
-    margin: 80px auto;
+    margin: 40px auto;
     padding: 30px 50px;
     padding-bottom: 50px;
     /* border: 1px solid red; */
     background: rgba(8, 8, 41, 0.9);
+    /* border: 1px magenta solid; */
 }
 
 /* ----------Hero Section---------- */
 #hero-section {
     background: none;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* border: 1px red dotted; */
-
+    margin-top: 100px;
 }
 
 #top-logo {
-    max-width: 800px;
-    /* border: 1px yellow solid; */
-    margin: 80px;
+    max-width: 100%;
+    margin: 0px;
 }
 
 
@@ -167,8 +159,7 @@ section {
 }
 
 #top-head {
-    text-align: center;
-    
+    text-align: center; 
 }
 
 /* ----------Features Section---------- */
@@ -202,6 +193,7 @@ section {
 #roster-section {
     /* border: 1px solid red; */
     width: 100vw;
+    padding-bottom: 80px;
 }
 
 .roster-wrap {
@@ -228,41 +220,41 @@ section {
 }
   
 .flip-card-inner {
-position: relative;
-width: 100%;
-height: 100%;
-text-align: center;
-transition: transform 0.6s;
-transform-style: preserve-3d;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-border-radius: 15px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 15px;
 
 }
 
 .flip-card:hover .flip-card-inner {
-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .flip-card-front, .flip-card-back {
-position: absolute;
-width: 100%;
-height: 100%;
--webkit-backface-visibility: hidden;
-backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .flip-card-front {
-background-color: #bbb;
-color: black;
-border-radius: 15px;
-background-color: #18194f;
+    background-color: #bbb;
+    color: black;
+    border-radius: 15px;
+    background-color: #18194f;
 }
 
 .flip-card-back {
-background-color: #191451;
-color: white;
-transform: rotateY(180deg);
-border-radius: 15px;
+    background-color: #191451;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 15px;
 }
 
 .flip-card-back i {
@@ -297,7 +289,6 @@ border-radius: 15px;
     border-radius: 20px;
 }
 
-
 /* ----------Quote Section---------- */
 
 #quotes-section {
@@ -317,7 +308,6 @@ blockquote {
     font-style: italic;
 }
 
-
 #links-section {
     width: 100%;
     /* border: 1px solid yellow; */
@@ -329,7 +319,6 @@ blockquote {
     justify-content: center;
     align-items: center;
 }
-
 
 #gallery-section {
     background: none;
@@ -459,4 +448,145 @@ img {
   .active,
   .demo:hover {
     opacity: 1;
+  }
+
+
+  @media screen and (max-width: 650px) {
+
+    header {
+        width: 100%;
+        z-index: 1000; /* keeps gallery from overlapping, header on top always */
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    header > nav li {
+        margin: 0 0px;    
+    }
+    
+    #header-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    #header-links a {
+        /* padding: 14px 16px; */
+        /* border: 1px solid yellow; */
+    }
+    
+    #turtle-logo {
+        object-fit: contain;
+        max-width: 90px;
+    }
+
+    section {
+        margin: 20px auto;
+        padding: 15px 15px;
+        padding-bottom: 50px;
+    }
+
+     /* -----Hero Section---- */
+     #hero-section {
+        margin-top: 100px;
+        background: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .media-viewer iframe {
+        width: 100vw;
+    }
+
+    /* -----About Section---- */
+    #opening {
+        gap: 30px;
+        padding: 40px;
+        flex-direction: column-reverse;
+    }
+    
+    .about-div {
+        width: 100%;
+        /* border: 1px dotted yellow; */
+    }
+    
+    #top-head {
+        text-align: center; 
+    }
+
+    
+    /* -----Features Section---- */
+    .features-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5em;
+    }
+
+    .card {
+        width: 100%;
+        /* border: 1px yellow solid; */
+        background: rgba(8, 8, 41, 0.9);
+        text-align: center;
+    }
+
+    /* -----Product Info---- */
+    #facts-section img {
+        width: 100%;
+    }
+
+    #products {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #facts-section table {
+        width: 100%;
+    }
+
+    /* -----Reviews---- */
+    #quotes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .quote-container {
+        width: 100%;
+    }
+
+    /* -----Gallery Section---- */
+    #gallery-section {
+        width: 100%;
+    }
+
+    /* -----Footer Section---- */
+    footer{
+        width: 100%;
+        padding: 15px;
+        padding-bottom: 30px;
+        background-color: #06030e;
+        color: white;
+        font-size: 0.75em;
+        margin-top: 40px;
+    }
+    
+    #footerlinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .copyright {
+        text-align: center;
+    }
   }
