@@ -8,8 +8,7 @@ scroll-behavior: smooth;
 
 body {
     font-family: Rubik, Helvetica, sans-serif;
-    /* background-image: url(https://www.shredders-revenge.com/wp-content/uploads/2021/02/BG.jpg); */
-    background-image: url('../img/BG.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),url('../img/BG.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,7 +42,7 @@ header {
     top: 0;
     background-color: #06030e;
     color: white;
-    width: 100vw;
+    width: 100%;
     z-index: 1000; 
 }
 
@@ -100,14 +99,22 @@ h2 {
     font-size: 3.5em;
     text-transform: uppercase;
     font-weight: 100;
+    text-shadow: #051c19 3px 3px 0px;
 }
 
 h3 {
+    font-size: 1.8em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+h4 {
     font-size: 1.5em;
+    text-transform: uppercase;
 }
 
 .green-text {
-    color: rgb(3, 174, 3);
+    color: rgb(3, 233, 3);
 }
 
 #top-head {
@@ -116,11 +123,26 @@ h3 {
 
 section {
     margin: 40px auto;
-    padding: 30px 50px;
+    padding: 30px 60px;
     padding-bottom: 50px;
-    /* border: 1px solid red; */
-    background: rgba(8, 8, 41, 0.9);
-    /* border: 1px magenta solid; */
+    background: rgba(8, 8, 41, 0.6);
+}
+
+.button-green {
+    background-color: #0a9f54;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.3s;
+    color: white;
+    cursor: pointer;
+}
+
+.button-green:hover {
+    background-color: #1dd466;
 }
 
 /* ----------Hero Section---------- */
@@ -130,32 +152,55 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 #top-logo {
-    max-width: 100%;
-    margin: 0px;
+    width: 100%;
 }
 
-
 /* ----------Intro Section---------- */
+#opening-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),url('../img/x7824q2p1n691.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 #opening {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-    width: 100vw;
-    padding: 80px;
+    gap: 40px;
+    width: 100%;
+    padding: 60px 100px;
+    
 }
 
-.about-div {
-    width: 30%;
-    /* border: 1px dotted yellow; */
+.opening_about-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.opening_about-right {
+    width: 45%;
+    background-color: rgba(19, 9, 51, 0.8);
+    padding: 5px 50px 35px 50px;
+    border-radius: 8px;
 }
 
 #keyart {
     width: 100%;
+    border: 3px solid rgb(158, 230, 183);
+}
+
+.second {
+    width: calc(50% - 10px);
+    border: 3px solid rgb(158, 230, 183); 
 }
 
 #top-head {
@@ -171,7 +216,7 @@ section {
 .features-flex {
     display: flex;
     justify-content: center;
-    gap: 1.5em;
+    gap: 3em;
 }
 
 .card {
@@ -179,6 +224,7 @@ section {
     /* border: 1px yellow solid; */
     background: rgba(8, 8, 41, 0.9);
     text-align: center;
+    border-radius: 8px;
 }
 
 .card p {
@@ -187,13 +233,19 @@ section {
 
 .card img {
     width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-/* ----------Roster---------- */
+/* ----------Roster Section---------- */
 #roster-section {
-    /* border: 1px solid red; */
-    width: 100vw;
+    width: 100%;
     padding-bottom: 80px;
+    background-image: linear-gradient(rgba(24, 3, 66, 0.8), rgba(17, 1, 59, 0.8)),url('../img/tumblr_dd201c2cc54f9ee93eb97e6100d76de0_d78d0825_2048.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .roster-wrap {
@@ -202,7 +254,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
     /* border: 1px dotted lime; */
 }
@@ -245,9 +297,10 @@ section {
 
 .flip-card-front {
     background-color: #bbb;
-    color: black;
+    /* color: black; */
     border-radius: 15px;
-    background-color: #18194f;
+    background-color: #11123b;
+    border: 3px rgb(32, 214, 123) solid;
 }
 
 .flip-card-back {
@@ -272,7 +325,7 @@ section {
 }
 
 #facts-section img {
-    width: 500px;
+    width: 550px;
 }
 
 #products {
@@ -286,22 +339,28 @@ section {
     padding: 40px;
     max-height: 500px;
     width: 650px;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 /* ----------Quote Section---------- */
 
 #quotes-section {
-    width: 100vw;
+    width: 100%;
+    background-image: linear-gradient(rgba(24, 3, 66, 0.8), rgba(17, 1, 59, 0.8)),url('../img/tumblr_033bf079d6368fc921dcf64aae69741d_ed525a7f_2048.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #quotes {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .quote-container {
-    width: 22%;
+    width: 65%;
 }
 
 blockquote {
@@ -326,7 +385,7 @@ blockquote {
 
 /* ----------Footer---------- */
 footer{
-    width: 100vw;
+    width: 100%;
     padding: 20px;
     padding-bottom: 60px;
     background-color: #06030e;
@@ -453,6 +512,8 @@ img {
 
   @media screen and (max-width: 650px) {
 
+   
+
     header {
         width: 100%;
         z-index: 1000; /* keeps gallery from overlapping, header on top always */
@@ -492,24 +553,32 @@ img {
     }
 
      /* -----Hero Section---- */
-     #hero-section {
-        margin-top: 100px;
-        background: none;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
+    
 
     .media-viewer iframe {
-        width: 100vw;
+        /* width: 100%; */
+        /* height: auto; */
     }
 
     /* -----About Section---- */
     #opening {
-        gap: 30px;
         padding: 40px;
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+
+    #opening img {
+        width: 100%;
+    }
+
+    .opening_about-left {
+        width: 100%;
+    }
+    
+    .opening_about-right {
+        width: 100%;
+        background-color: rgba(19, 9, 51, 0.8);
+        padding: 5px 50px 35px 50px;
+        border-radius: 8px;
     }
     
     .about-div {
