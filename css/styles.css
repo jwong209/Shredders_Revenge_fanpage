@@ -236,8 +236,7 @@ section {
     border-top-right-radius: 8px;
 }
 
-
-.music-left {
+#music-subsection {
     margin: 40px auto;
     width: 65%;
     background-color: rgba(19, 9, 51, 0.8);
@@ -250,7 +249,8 @@ section {
     background-attachment: fixed;
 }
 
-#music hr {
+
+#music-subsection hr {
     width: 60%;
 }
 
