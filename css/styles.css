@@ -239,10 +239,14 @@ section {
 #music-subsection {
     margin: 40px auto;
     width: 65%;
-    background-color: rgba(19, 9, 51, 0.8);
+    /* background-color: rgba(19, 9, 51, 0.8); */
     padding: 5px 50px 35px 50px;
     border-radius: 8px;
     background-image: linear-gradient(rgba(24, 3, 66, 0.9), rgba(17, 1, 59, 0.7)), url(../img/0030606801_10.jpg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
